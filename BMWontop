@@ -2916,3 +2916,7 @@ statManagementFolder:AddButton(
         setclipboard(statsText)
     end
 )
+updateStats()
+library:Init(return)
+end
+)
