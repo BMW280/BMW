@@ -66,6 +66,11 @@ ReplicatedStorage.ChildAdded:Connect(
     end
 )
 
+local damageLabel = damageGui:FindFirstChild("damageLabel")
+if not damageLabel then
+    warn("damageLabel does not exist!")
+else
+end)
 local window =
     library:AddWindow(
     " | BMWontop",
