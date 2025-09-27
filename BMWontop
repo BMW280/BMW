@@ -65,20 +65,6 @@ ReplicatedStorage.ChildAdded:Connect(
         end
     end
 )
-
-local damageLabel = damageGui:FindFirstChild("damageLabel")
-if not damageLabel then
-    warn("damageLabel does not exist!")
-else
-end)
-local success, topBarApp = pcall(function()
-    return CoreGui:WaitForChild("TopBarApp", 5) 5 seconds timeout
-end)
-
-if not success or not topBarApp then
-    warn("TopBarApp does not exist or timed out!")
-else
-end)
 local window =
     library:AddWindow(
     " | BMWontop",
