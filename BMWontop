@@ -2917,6 +2917,6 @@ statManagementFolder:AddButton(
     end
 )
 updateStats()
-library:Init(return)
+library:Init()
 end
 )
