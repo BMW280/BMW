@@ -42,7 +42,28 @@ local function removePortals()
         end
     )
 end
+removePortals()
 
+local blockedFrames = {
+    "strengthFrame",
+    "durabilityFrame",
+    "agilityFrame",
+    "evilKarmaFrame",
+    "goodKarmaFrame"
+}
+for _, name in ipairs(blockedFrames) do
+    local frame = ReplicatedStorage:FindFirstChild(name)
+    if frame and frame:IsA("GuiObject") then
+        frame.Visible = false
+    end
+end
+ReplicatedStorage.ChildAdded:Connect(
+    function(child)
+        if table.find(blockedFrames, child.Name) and child:IsA("GuiObject") then
+            child.Visible = false
+        end
+    end
+)
 local window = library:AddWindow("Phantom", {
     main_color = Color3.fromRGB(0, 0, 0),
     min_size = Vector2.new(650, 870),
