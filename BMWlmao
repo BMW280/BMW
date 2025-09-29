@@ -66,7 +66,7 @@ ReplicatedStorage.ChildAdded:Connect(
 )
 local window = library:AddWindow("Phantom", {
     main_color = Color3.fromRGB(0, 0, 0),
-    min_size = Vector2.new(650, 870),
+    min_size = Vector2.new(750, 950),
     can_resize = true,
 })
 
