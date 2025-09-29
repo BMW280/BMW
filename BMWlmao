@@ -26,7 +26,7 @@ local AutoFarm = window:AddTab("Farm Op")
 getgenv()._AutoRepFarmEnabled = false  
 
 -- Switch en la librería
-AutoFarm:AddSwitch("Strength Op (Use it if your minimum ping is 250 ms)", function(state)
+AutoFarm:AddSwitch("strength farm (overclocked)", function(state)
     getgenv()._AutoRepFarmEnabled = state
     warn("[Auto Rep Farm] Estado cambiado a:", state and "ON" or "OFF")
 end)
@@ -45,8 +45,8 @@ local PROTEIN_EGG_INTERVAL = 30 * 60
 local REPS_PER_CYCLE = 10
 local REP_DELAY = 0.01
 local ROCK_INTERVAL = 5
-local MAX_PING = 450   -- si pasa esto, pausa
-local MIN_PING = 250   -- si baja de esto, reanuda
+local MAX_PING = 1000   -- si pasa esto, pausa
+local MIN_PING = 120   -- si baja de esto, reanuda
 
 -- Variables internas
 local HumanoidRootPart
